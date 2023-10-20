@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/signin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;900&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="header"><img src="src/img/signin/Logo.png" alt=""></div>
+        <div class="content">
+           <span>Welcome back</span>
+            <h1>Login to your account</h1>
+        </div>
+    <form action="" onsubmit="return validate()">
+        <div class="signin">
+            <p>Email</p>
+            <input type="text" id="email" placeholder="John.snow@gmail.com"> <br>
+             <span id="loiemail" style="color: red; margin-left: -75px;" ></span>
+           
+        </div>
+        <div> <p>Password</p>
+            <input type="text" name="" id="pass" placeholder="*********"> <br>
+            <span id="loipass" style="color: red; margin-left: -190px;" ></span>
+        </div>
+
+        <div class="login">
+            <button id="loginnow" type="submit">Login now</button>
+           
+        </div> 
+        <div class="dangnhapgoogle">
+            <button id="google"> 
+                <img src="src/img/signin/iconfinder_Google_1298745 1.png" alt=""> Or sign-in with google</button>
+        </div>
+    </form>
+        <div class="forgot">
+         <span>Forgot password?</span>
+         <p>Dont have an account? <span>Join free today</span></p>
+
+        </div>
+    </div>
+    <script src="src/js/signin.js"></script>
+</body>
+</html>

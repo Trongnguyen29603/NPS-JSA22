@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return validate()">
+        <label for="">ho tên </label><input type="text" id="hoten"> <br>
+        <span id="loiten"></span> <br>
+        <label for="">email</label> <input type="text" name="" id="email"> <br>
+        <span id="loiemail"></span> <br>
+        <select name="" id="" onchange="chon(this.value)">
+            <option value="0">chọn ngành học </option>
+            <option value="1">js</option>
+            <option value="2">php</option>
+            <option value="3">c++</option>
+        </select>
+        <br>
+        <br>
+    <label for="">số lượng</label>
+    <input  type="number" id="soluong" onchange="so()"><br>
+    <label for="">số tiền</label>
+    <input type="text" id="tien"><br>
+    <label for="">thành tiền</label> 
+    <input type="text" name="" id="thanhtien"><br>
+          <button type="submit">gửi</button>
+    </form>
+    <script>
+        var hoten = document.getElementById('hoten');
+        var email = document.getAnimations('email');
+        var so = document.getElementById('so');
+        var soluong = document.getElementById('soluong')
+        var thanhtien = document.getElementById('thanhtien');
+        var falg = true;
+        function validate(){
+            if(hoten.value==''||hoten.value.length<6){
+                hoten.style='background : red';
+                document.getElementById('loiten').innerHTML='bạn phải nhập trên 6 ký tự';
+                falg=false;
+            }else{
+                hoten.style='background : none';
+                document.getElementById('loiten').innerHTML=''; 
+            }
+          
+            return falg;
+        }
+       function chon(mon){
+           var gia = document.getElementById('tien');
+         
+           if(mon ==0){
+               gia.value=0;
+
+           }else if(mon==1){
+               gia.value=200;
+           }else if(mon==2){
+               gia.value=400;
+           }else if(mon==3){
+               gia.value=600;
+           }
+       }
+    function so(){
+        thanhtien.value = gia.value * soluong.value;
+    }
+
+
+
+
+        //regex email= /^\w+([\.-]?\w+)*@\w+(\.\w{2,3})+$/
+        // var err_pass = /^(?=.*[0-9]).{6,}/; mật khẩu cso ít nhất 1 số
+        //  var reg_phone =/^0\d{9}$/;
+        //mật khẩu có ít nhất 1 ký tự hoa = /^(?=.*[A-Z]).{6,}/
+       //mk có số và chữ = /^(?=.*[A-Z])(?=.*[0-9]).{6,}/
+    </script>
+</body>
+</html>
+/^\w+([\.-]?\w+)*@\w+(\.\w{2,3})+$/
+/^0\d{9}$/;
